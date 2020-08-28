@@ -1,0 +1,27 @@
+
+.stats {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.stats li {
+    width: 70px;
+    outline: 2px solid #000000;
+    background-color: rosybrown;
+}
+
+
+.label {
+    display: block;
+    text-align: center;
+}
+
+.quantity {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+}

@@ -5,13 +5,13 @@ import React from 'react';
 function Statistics({title, stats}) {
     return (
         
-<section class="statistics">
-    {title&&<h2 class="title">{title}</h2>}
+<section className="statistics">
+    {title&&<h2 className="title">{title}</h2>}
     <ul>
-    {stats.map(({id, lable, percentage}) => (
+    {stats.map(({id, label, percentage}) => (
       <li key={id}>
-          <span class="label">{lable}</span>
-          <span class="percentage">{percentage}%</span>
+          <span className="label">{label}</span>
+          <span className="percentage">{percentage}%</span>
           </li>
     ))}
     </ul>

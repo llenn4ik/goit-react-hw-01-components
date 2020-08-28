@@ -1,11 +1,13 @@
 import React from 'react';
-import Profile from './Profile';
-import Statistic from './Statistic-profile';
+import Profile from './Profile/Profile';
+import Statistic from './Statistic-profile/Statistic-profile';
 import user from '../json/user.json';
-import Statistics from './Statistics';
+import Statistics from './Statistics/Statistics';
 import statsData from '../json/statistical-data.json';
-import FriendsList from './Friend-list';
+import FriendsList from './Friend-list/Friend-list';
 import friends from '../json/friend-list.json'
+import transactions from '../json/transactions.json';
+import TransactionHistory from './Transaction-histoy/Transaction-histoy'
 
 
 export default function App() {
@@ -15,6 +17,7 @@ export default function App() {
       <Statistic stats={user.stats} /> 
       <Statistics title="Upload stats" stats={statsData} />
       <FriendsList friends={friends} />
+      <TransactionHistory  items={transactions} />
       </>
     )
   }
