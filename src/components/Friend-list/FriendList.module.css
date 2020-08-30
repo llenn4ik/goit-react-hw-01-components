@@ -1,0 +1,44 @@
+.container{
+    margin: 0 auto;
+    width: 350px;
+}
+
+.friendsItems{
+    width: 100%;
+list-style: none;
+}
+.item {
+    display: flex;
+    padding: 20px 0;
+    text-align: center;
+    align-items: center;
+
+    box-shadow: 2px 4px 6px -1px rgba(167, 164, 164, 0.92);
+    margin-bottom: 18px;
+
+}
+
+.statusOn {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 20px;
+    background-color: rgb(124, 194, 161);
+}
+
+.statusOff {
+    composes: statusOn;
+    background-color: rgb(224, 146, 115);
+}
+
+.avatar {
+    display: block;
+    width: 100px;
+    border-radius: 15px;
+}
+
+.name {
+    margin-left: 20px;
+    font-size: 30px;
+}

@@ -1,30 +1,39 @@
-img {
+.avatar {
     display: block;
-    width: 100%;
-    height: auto;
-}
-
-.profile {
-    width: 210px;
+    /* width: 100%;
+    height: auto; */
     margin: 0 auto;
 }
 
-.description {
+.profile {
+    width: 428px;
+    height: 403px;
+    background-color: rgb(231, 236, 242);
 
-    background-color: rgb(247, 170, 28);
+}
+
+.description {
+    width: 250px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding-bottom: 30px;
 }
 
 .avatar {
-    border: 1px solid #fff;
+    border: 1px solid rgba(221, 214, 214, 0.726);
     border-radius: 50%;
 }
 
 .name {
     text-align: center;
+    margin-top: 30px;
+
 }
 
 .tag {
     text-align: center;
+    color: rgb(155, 166, 178);
 }
 
 .location {
@@ -32,4 +41,5 @@ img {
     margin: 0;
     padding: 0;
     padding-bottom: 10px;
+    color: rgb(155, 166, 178);
 }

@@ -1,23 +1,29 @@
 
 .stats {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     list-style: none;
     display: flex;
     justify-content: space-between;
+    text-align: center;
+    font-size: 14px;
+    width: 250px;
+    /* height: 64px; */
 }
 
 
 .stats li {
-    width: 70px;
-    outline: 2px solid #000000;
-    background-color: rosybrown;
+    width: 83px;
+    outline: 2px solid  rgb(170, 188, 207);;
+    background-color: rgb(215, 217, 219)
 }
 
 
 .label {
     display: block;
+
     text-align: center;
+    color: rgb(155, 166, 178);
 }
 
 .quantity {

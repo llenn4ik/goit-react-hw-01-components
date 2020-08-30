@@ -1,9 +1,9 @@
 import React from 'react';
-// import trans from '../json/transactions.json';
+import styles from './TransactionHistory.module.css';
 
 function TransactionHistory({items}) {
 return (
-<table className="transaction-history">
+<table className={styles.transactionHistory}>
   <thead>
     <tr>
       <th>Type</th>
@@ -13,8 +13,8 @@ return (
   </thead>
 
 {  items.map(({id, type, amount, currency}) => (
-<tbody>
-    <tr key={id}>
+<tbody key={id}>
+    <tr >
       <td>{type}</td>
       <td>{amount}</td>
       <td>{currency}</td>
