@@ -1,24 +1,28 @@
-import React from 'react';
-// import stats from '../json/statistical-data.json'
-import styles from './Statistics.module.css';
+import React from "react";
 
-function Statistics({title, stats}) {
-    return (
-        
-<section className={styles.statistics}>
-    {title&&<h2 className={styles.title}>{title}</h2>}
-    <ul className={styles.statList}>
-    {stats.map(({id, label, percentage}) => (
-      <li key={id} className={styles.li}>
-          <span className={styles.label}>{label}</span>
-          <span className={styles.percentage}>{percentage}%</span>
+import PropTypes from 'prop-types';
+
+import s from "./Statistics.module.css";
+
+const Statistics = ({ title, stats }) => {
+    const isShowTitle = title;
+  return (
+    <section className={s.statistics}>
+      {isShowTitle && <h2 className={s.title}>{title}</h2>}
+      <ul className={s.statList}>
+        {stats.map(({ id, label, percentage }) => (
+          <li key={id} className={s.listItem}>
+            <span className={s.label}>{label}</span>
+            <span className={s.percentage}>{percentage}%</span>
           </li>
-    ))}
-    </ul>
-</section>
-    )
+        ))}
+      </ul>
+    </section>
+  );
 }
 
-
-
-export default Statistics
+Statistics.propTypes = {
+    title: PropTypes.string,
+    stats: PropTypes.arrayOf(PropTypes.object).isRequired,
+  };
+export default Statistics;

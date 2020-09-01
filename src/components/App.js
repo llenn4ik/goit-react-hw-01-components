@@ -1,22 +1,25 @@
 import React from 'react';
+
 import Profile from './Profile/Profile';
-import user from '../json/user.json';
 import Statistics from './Statistics/Statistics';
-import statsData from '../json/statistical-data.json';
 import FriendsList from './Friend-list/Friend-list';
-import friends from '../json/friend-list.json'
-import transactions from '../json/transactions.json';
 import TransactionHistory from './Transaction-history/Transaction-history'
 
+import user from '../json/user.json';
+import statsData from '../json/statistical-data.json';
+import friends from '../json/friend-list.json'
+import transactions from '../json/transactions.json';
 
-export default function App() {
+
+ function App() {
     return(
       <>
-      <Profile user={user} avatar={user.avatar} />
-      <Statistics title="Upload stats" stats={statsData} />
-      <FriendsList friends={friends} />
-      <TransactionHistory  items={transactions} />
+        <Profile {...user} />
+        <Statistics title="Upload stats" stats={statsData} />
+        <FriendsList friends={friends} />
+        <TransactionHistory  items={transactions} />
       </>
     )
-  }
+  };
   
+  export default App

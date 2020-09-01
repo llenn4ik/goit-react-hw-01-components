@@ -1,25 +1,23 @@
-import React from 'react';
-import styles from './Statistic-profile.module.css';
+import React from "react";
+import s from "./Statistic-profile.module.css";
 
+const Statistic = ({ followers, views, likes }) => {
+  return (
+    <ul className={s.stats}>
+      <li>
+        <span className={s.label}>Followers</span>
+        <span className={s.quantity}>{followers}</span>
+      </li>
+      <li>
+        <span className={s.label}>Views</span>
+        <span className={s.quantity}>{views}</span>
+      </li>
+      <li>
+        <span className={s.label}>Likes</span>
+        <span className={s.quantity}>{likes}</span>
+      </li>
+    </ul>
+  );
+};
 
-
-export default function Statistic ({stats}) {
-    const {followers, views, likes } = stats;
-    return(
-      
-   <ul className={styles.stats}>
-   <li>
-     <span className={styles.label}>Followers</span>
-     <span className={styles.quantity}>{followers}</span>
-   </li>
-   <li>
-     <span className={styles.label}>Views</span>
-     <span className={styles.quantity}>{views}</span>
-   </li>
-   <li>
-     <span className={styles.label}>Likes</span>
-     <span className={styles.quantity}>{likes}</span>
-   </li>
- </ul>
-    )}
- 
+export default Statistic;
